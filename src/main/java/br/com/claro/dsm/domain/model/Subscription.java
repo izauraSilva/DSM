@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "SubscriptionSchema", schema = "subscriptionschema")
+@Table(name = "subscriptionSchema", schema = "subscriptionschema")
 public class Subscription {
 
     @Id
@@ -19,19 +19,19 @@ public class Subscription {
     @Column(name = "idSubscription")
     private long idSubscription;
 
-    @Column(name = "applicationConsumer")
+    @Column(name = "applicationConsumer", nullable = false)
     private String applicationConsumer;
 
     @Column(name = "language")
     private String language;
 
-    @Column(name = "purchaseChannel")
+    @Column(name = "purchaseChannel", nullable = false)
     private String purchaseChannel;
 
-    @Column(name = "purchaseDate")
+    @Column(name = "purchaseDate", nullable = false)
     private String purchaseDate;
 
-    @Column(name = "discountType")
+    @Column(name = "discountType", nullable = false)
     private String discountType;
 
     @Column(name = "offerId")

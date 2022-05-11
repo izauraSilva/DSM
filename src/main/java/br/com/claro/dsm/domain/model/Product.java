@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "ProductSchema", schema = "subscriptionschema")
+@Table(name = "productSchema", schema = "subscriptionschema")
 public class Product {
 
     @Id

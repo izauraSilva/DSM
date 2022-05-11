@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "SubscriberSchema", schema = "subscriptionschema")
+@Table(name = "subscriberSchema", schema = "subscriptionschema")
 public class Subscriber {
 
     @Id
@@ -18,22 +18,22 @@ public class Subscriber {
     @Column(name = "idSubscriber")
     private long idSubscriber;
 
-    @Column(name = "accountOwnerId")
+    @Column(name = "accountOwnerId", nullable = false)
     private String accountOwnerId;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "identificationId")
+    @Column(name = "identificationId", nullable = false)
     private String identificationId;
 
-    @Column(name = "identificationType")
+    @Column(name = "identificationType", nullable = false)
     private String identificationType;
 
-    @Column(name = "phoneNumber")
+    @Column(name = "phoneNumber", nullable = false)
     private String phoneNumber;
 
-    @Column(name = "emailAddress")
+    @Column(name = "emailAddress", nullable = false)
     private String emailAddress;
 
     @OneToOne(mappedBy = "subscriber")
