@@ -1,5 +1,6 @@
 package br.com.claro.dsm.dto;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 public class SubscriberDTO {
@@ -20,6 +21,7 @@ public class SubscriberDTO {
     private String phoneNumber;
 
     @NotBlank(message = "{emailAddress.not.blank}")
+    @Email
     private String emailAddress;
 
 }

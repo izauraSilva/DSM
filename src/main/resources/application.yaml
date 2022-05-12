@@ -18,12 +18,8 @@ spring:
     show-sql: 'true'
 
 aws:
-  #endpointUrl: https://s3.amazonaws.com
+  endpointUrl: https://new-stack-tv-dev.s3.sa-east-1.amazonaws.com
   region: sa-east-1
   bucketName: new-stack-tv-dev
   key: ASIA3GNKGV5722ACCRF7
   secret: n9+01DwM4TZL/hvJUFyj0TNPwvGLXOuQEUSziI1g
-
-file:
-  path: /
-  filename: upload-teste-s3.txt
