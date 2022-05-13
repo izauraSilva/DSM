@@ -64,9 +64,9 @@ public class Product {
     @Column(name = "productHashCode")
     private String productHashCode;
 
-    @ManyToOne
+    /*@ManyToOne(cascade=CascadeType.PERSIST)
     @JsonIgnore
     @JoinColumn(name = "idSubscription")
-    private Subscription subscription;
+    private Subscription subscription;*/
 
 }

@@ -36,7 +36,4 @@ public class Subscriber {
     @Column(name = "emailAddress", nullable = false)
     private String emailAddress;
 
-    @OneToOne(mappedBy = "subscriber")
-    private Subscription subscription;
-
 }

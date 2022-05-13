@@ -41,10 +41,11 @@ public class Subscription {
     private String accountMemberId;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "subscriber_id", referencedColumnName = "idSubscriber")
+    @JoinColumn(name = "idSubscriber", referencedColumnName = "idSubscriber")
     private Subscriber subscriber;
 
-    @OneToMany(mappedBy = "subscription", cascade = CascadeType.ALL)
-    private List<Product> products;
+
+    /*@OneToMany(mappedBy = "subscription", cascade = CascadeType.ALL)
+    private List<Product> products;*/
 
 }

@@ -36,8 +36,8 @@ public class Payment {
     @Column(name = "paymentCardKey")
     private String paymentCardKey;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    /*@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "product_id", referencedColumnName = "idProduct")
-    private Product product;
+    private Product product;*/
 
 }
