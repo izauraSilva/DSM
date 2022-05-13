@@ -1,12 +1,14 @@
 package br.com.claro.dsm.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Data
+@Builder
 public class SubscriberDTO {
 
     @NotBlank(message = "{accountOwnerId.not.blank}")

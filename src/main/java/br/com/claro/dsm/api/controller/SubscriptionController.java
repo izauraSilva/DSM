@@ -1,6 +1,9 @@
 package br.com.claro.dsm.api.controller;
 
+import br.com.claro.dsm.domain.model.Subscription;
 import br.com.claro.dsm.dto.request.RequestDTO;
+import lombok.val;
+import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +16,9 @@ public class SubscriptionController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public String teste(@Valid @RequestBody RequestDTO request) {
+
+        val subscription = new ModelMapper().map(request.getSubscriptionDTO(), Subscription.class);
+
         return "teste";
     }
 }

@@ -1,12 +1,14 @@
 package br.com.claro.dsm.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
 @Data
+@Builder
 public class ProductDTO {
 
     @NotBlank(message = "{referenceKey.not.blank}")
