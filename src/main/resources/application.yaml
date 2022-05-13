@@ -23,3 +23,7 @@ aws:
   bucketName: new-stack-tv-dev
   key: ASIA3GNKGV5722ACCRF7
   secret: n9+01DwM4TZL/hvJUFyj0TNPwvGLXOuQEUSziI1g7
+
+server:
+  error:
+    include-stacktrace: NEVER

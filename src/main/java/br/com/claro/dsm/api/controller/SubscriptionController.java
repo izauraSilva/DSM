@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+import static br.com.claro.dsm.dto.request.validate.AttributeMandatoryUtility.verifyAttributeMandatoryByType;
+
 @RestController
 @RequestMapping(value = "/api/dsm")
 public class SubscriptionController {
@@ -16,6 +18,8 @@ public class SubscriptionController {
     @PostMapping("/subscription")
     @ResponseStatus(HttpStatus.CREATED)
     public String teste(@Valid @RequestBody RequestDTO request) {
+
+        verifyAttributeMandatoryByType(request.getSubscriptionDTO());
 
         //segurança blindar entity .. expor somente dto
         val subscription = new ModelMapper().map(request.getSubscriptionDTO(), Subscription.class);
