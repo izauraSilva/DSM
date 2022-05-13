@@ -13,10 +13,11 @@ import javax.validation.Valid;
 @RequestMapping(value = "/api/dsm")
 public class SubscriptionController {
 
-    @PostMapping
+    @PostMapping("/subscription")
     @ResponseStatus(HttpStatus.CREATED)
     public String teste(@Valid @RequestBody RequestDTO request) {
 
+        //segurança blindar entity .. expor somente dto
         val subscription = new ModelMapper().map(request.getSubscriptionDTO(), Subscription.class);
 
         return "teste";
