@@ -1,6 +1,5 @@
 package br.com.claro.dsm.domain.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -73,11 +72,8 @@ public class Product implements Serializable {
     @JoinColumn(name="idSubscription")
     private Subscription subscription;
 
-   /* @ManyToOne(fetch = FetchType.LAZY)
-    private Payment payment;*/
-
-    /*@OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "idPayment", referencedColumnName = "idPayment")
-    private Payment payment;*/
+    private Payment payment;
 
 }
