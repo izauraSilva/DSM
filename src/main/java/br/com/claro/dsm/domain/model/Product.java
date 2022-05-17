@@ -23,7 +23,7 @@ public class Product implements Serializable {
     @Column(name = "idProduct")
     private long idProduct;
 
-    @Column(name = "referenceKey")
+    @Column(name = "referenceKey", nullable = false)
     private String referenceKey;
 
     @Column(name = "id")
@@ -41,16 +41,19 @@ public class Product implements Serializable {
     @Column(name = "hasAutomaticBilling")
     private Boolean hasAutomaticBilling;
 
-    @Column(name = "isRecurrent")
+    //@Column(name = "isRecurrent", nullable = false, columnDefinition = "default bit 0")
+    //private Boolean isRecurrent = false;
+
+    @Column(name = "isRecurrent", columnDefinition = "boolean default false")
     private Boolean isRecurrent;
 
     @Column(name = "orderNumber")
     private String orderNumber;
 
-    @Column(name = "description")
+    @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "contentProvider")
+    @Column(name = "contentProvider", nullable = false)
     private String contentProvider;
 
     @Column(name = "isAdultCategory")

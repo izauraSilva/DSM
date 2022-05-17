@@ -1,11 +1,15 @@
 package br.com.claro.dsm.dto.request;
 
+import br.com.claro.dsm.dto.request.check.ProductCheck;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.Valid;
+import javax.validation.constraints.AssertFalse;
+import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Data
 @Builder
@@ -30,7 +34,8 @@ public class ProductDTO {
     @JsonProperty("hasAutomaticBilling")
     private Boolean hasAutomaticBilling;
 
-    //@NotBlank(message = "{isRecurrent.not.blank}")
+    @NotNull
+    @AssertTrue(message = "{isRecurrent.not.blank}", groups = ProductCheck.class)
     @JsonProperty("isRecurrent")
     private Boolean isRecurrent;
 
