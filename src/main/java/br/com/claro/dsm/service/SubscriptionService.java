@@ -4,5 +4,5 @@ import br.com.claro.dsm.domain.model.Subscription;
 
 public interface SubscriptionService {
 
-    Subscription save(Subscription subscription);
+    Subscription createSubscription(Subscription subscription);
 }

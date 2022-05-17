@@ -33,7 +33,7 @@ public class SubscriptionController {
         Subscription subscription = subscriptionBuilder.getSubscription(request);
 
         //persitir no BD
-        service.save(subscription);
+        service.createSubscription(subscription);
 
         //return somente code http
         return new ResponseEntity(HttpStatus.CREATED);

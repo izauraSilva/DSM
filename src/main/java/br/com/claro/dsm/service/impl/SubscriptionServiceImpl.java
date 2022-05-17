@@ -13,7 +13,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
     private SubscriptionRepository repository;
 
     @Override
-    public Subscription save(Subscription subscription) {
+    public Subscription createSubscription(Subscription subscription) {
         return repository.save(subscription);
     }
 }
