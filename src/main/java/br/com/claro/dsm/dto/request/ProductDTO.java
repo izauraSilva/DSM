@@ -15,7 +15,7 @@ public class ProductDTO {
     @JsonProperty("referenceKey")
     private String referenceKey;
 
-    @JsonProperty("productCod")
+    @JsonProperty("id")
     private String productCod;
 
     @JsonProperty("type")

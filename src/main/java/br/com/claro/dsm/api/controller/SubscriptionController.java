@@ -28,7 +28,7 @@ public class SubscriptionController {
     public String teste(@Valid @RequestBody RequestDTO request) {
 
         //valida campos obrigatórios dependendo do tipo
-        verifyAttributeMandatoryByType(request.getSubscriptionDTO());
+        //verifyAttributeMandatoryByType(request.getSubscriptionDTO());
 
         //segurança blindar entity .. expor somente dto
         val subscription = new ModelMapper().map(request.getSubscriptionDTO(), Subscription.class);

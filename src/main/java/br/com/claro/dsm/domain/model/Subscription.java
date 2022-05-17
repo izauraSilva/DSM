@@ -44,8 +44,11 @@ public class Subscription {
     @JoinColumn(name = "idSubscriber", referencedColumnName = "idSubscriber")
     private Subscriber subscriber;
 
+    @OneToMany(fetch=FetchType.LAZY, mappedBy="subscription", cascade={CascadeType.ALL})
+    private List<Product> products;
 
-    /*@OneToMany(mappedBy = "subscription", cascade = CascadeType.ALL)
+   /* @OneToMany(cascade=CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @JoinColumn(name = "idProduct")
     private List<Product> products;*/
 
 }

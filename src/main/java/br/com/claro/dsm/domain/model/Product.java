@@ -6,13 +6,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
 @Table(name = "productSchema", schema = "subscriptionschema")
-public class Product {
+public class Product implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -64,9 +67,26 @@ public class Product {
     @Column(name = "productHashCode")
     private String productHashCode;
 
-    /*@ManyToOne(cascade=CascadeType.PERSIST)
+    /*@ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "idSubscription", nullable = false)
     @JsonIgnore
-    @JoinColumn(name = "idSubscription")
     private Subscription subscription;*/
+
+    @ManyToOne(fetch=FetchType.LAZY, cascade={CascadeType.ALL})
+    @JoinColumn(name="idSubscription")
+    private Subscription subscription;
+
+    //@ManyToOne(fetch = FetchType.LAZY, optional = false)
+    //@JoinColumn(name = "idSubscription", nullable = false)
+    //@ManyToOne(mappedBy = "stockItems")
+    //@ManyToOne(mappedBy = "subscription")
+    //private Subscription subscription;
+
+   /* @ManyToOne(fetch = FetchType.LAZY)
+    private Payment payment;*/
+
+    /*@OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idPayment", referencedColumnName = "idPayment")
+    private Payment payment;*/
 
 }

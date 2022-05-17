@@ -10,13 +10,13 @@ public class AttributeMandatoryUtility {
 
     public static void verifyAttributeMandatoryByType(SubscriptionDTO subscriptionDTO){
 
-        subscriptionDTO.getProductDTOS().stream()
+        /*subscriptionDTO.getProductDTOS().stream()
                 .filter(s -> s.getType().contains(SVOD))
                 .forEach((productDTO) -> {
                     if(productDTO.getValidityStartDate()==null || productDTO.getPartnerPurchaseId()==null){
                         throw new AllMandatoryAttributesFilledException(
                                 String.format(MSG_SVOD));
                     }
-                });
+                });*/
     }
 }
