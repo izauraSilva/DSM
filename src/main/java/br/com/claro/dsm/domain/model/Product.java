@@ -2,12 +2,14 @@ package br.com.claro.dsm.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -67,20 +69,9 @@ public class Product implements Serializable {
     @Column(name = "productHashCode")
     private String productHashCode;
 
-    /*@ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "idSubscription", nullable = false)
-    @JsonIgnore
-    private Subscription subscription;*/
-
     @ManyToOne(fetch=FetchType.LAZY, cascade={CascadeType.ALL})
     @JoinColumn(name="idSubscription")
     private Subscription subscription;
-
-    //@ManyToOne(fetch = FetchType.LAZY, optional = false)
-    //@JoinColumn(name = "idSubscription", nullable = false)
-    //@ManyToOne(mappedBy = "stockItems")
-    //@ManyToOne(mappedBy = "subscription")
-    //private Subscription subscription;
 
    /* @ManyToOne(fetch = FetchType.LAZY)
     private Payment payment;*/
