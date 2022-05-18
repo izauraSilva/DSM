@@ -7,6 +7,11 @@ import lombok.Data;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe DTO Subscriber
+ */
 @Data
 @Builder
 public class SubscriberDTO {

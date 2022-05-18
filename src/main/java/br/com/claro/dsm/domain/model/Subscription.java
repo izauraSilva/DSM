@@ -8,6 +8,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe model - Subscription
+ */
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

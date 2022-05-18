@@ -11,6 +11,11 @@ import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe DTO Product
+ */
 @Data
 @Builder
 public class ProductDTO {

@@ -8,6 +8,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe model - Product
+ */
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

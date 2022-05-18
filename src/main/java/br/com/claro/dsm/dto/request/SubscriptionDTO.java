@@ -10,6 +10,11 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import java.util.List;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe DTO Subscription
+ */
 @Data
 @Builder
 public class SubscriptionDTO {

@@ -10,9 +10,19 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe Builder dto to entity
+ */
 @Component
 public class SubscriptionBuilder {
 
+    /**
+     * RequestDTO To Entity Subscription
+     * @param request
+     * @return subscription
+     */
     public Subscription getSubscription(RequestDTO request) {
 
         List<Product> productList = new ArrayList<>();

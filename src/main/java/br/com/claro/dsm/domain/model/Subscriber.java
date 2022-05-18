@@ -7,6 +7,11 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe model - Subscriber
+ */
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

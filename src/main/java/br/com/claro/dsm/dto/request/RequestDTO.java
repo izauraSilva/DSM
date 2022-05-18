@@ -5,6 +5,11 @@ import lombok.Data;
 
 import javax.validation.Valid;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe DTO Request
+ */
 @Data
 public class RequestDTO {
 

@@ -6,6 +6,11 @@ import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe DTO Payment
+ */
 @Data
 @Builder
 public class PaymentDTO {

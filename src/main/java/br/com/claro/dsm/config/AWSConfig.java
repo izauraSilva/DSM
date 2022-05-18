@@ -6,6 +6,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe config - S3 - Bitbucket
+ */
 @Configuration
 public class AWSConfig {
 

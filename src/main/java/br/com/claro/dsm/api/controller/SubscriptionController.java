@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe Controller - endpoints subscription
+ */
 @RestController
 @RequestMapping(value = "/api/dsm")
 public class SubscriptionController {
@@ -24,6 +29,12 @@ public class SubscriptionController {
     @Autowired
     private SubscriptionBuilder subscriptionBuilder;
 
+    /**
+     * Endpoint - Gestão de assinaturas de produtos contratados por um cliente
+     *
+     * @param request
+     * @return HttpStatus
+     */
     @PostMapping("/subscription")
     public ResponseEntity createSubscriptions(@Valid @RequestBody RequestDTO request) {
 

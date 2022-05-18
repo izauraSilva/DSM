@@ -9,19 +9,29 @@ import org.springframework.stereotype.Service;
 
 import static br.com.claro.dsm.dto.request.validate.AttributeMandatoryUtility.verifyAttributeMandatoryByType;
 
+/**
+ * @author Izaura Silva
+ *
+ * Classe implementação service da Gestão de Assinaturas
+ */
 @Service
 public class SubscriptionServiceImpl implements SubscriptionService {
 
     @Autowired
     private SubscriptionRepository repository;
 
+
+    /**
+     * Incluir no BD dados da assinatura
+     * @param subscription
+     */
     @Override
-    public Subscription createSubscription(Subscription subscription) {
+    public void createSubscription(Subscription subscription) {
 
         verifyAttributeMandatoryByType(subscription);
 
         try {
-            return repository.save(subscription);
+            repository.save(subscription);
         } catch (Exception e) {
             throw new InternalException(String.format(e.getCause().getCause().toString()));
         }
