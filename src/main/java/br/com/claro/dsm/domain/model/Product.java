@@ -41,9 +41,6 @@ public class Product implements Serializable {
     @Column(name = "hasAutomaticBilling")
     private Boolean hasAutomaticBilling;
 
-    //@Column(name = "isRecurrent", nullable = false, columnDefinition = "default bit 0")
-    //private Boolean isRecurrent = false;
-
     @Column(name = "isRecurrent", columnDefinition = "boolean default false")
     private Boolean isRecurrent;
 
