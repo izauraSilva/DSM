@@ -7,18 +7,12 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-
-/**
- * @author Izaura Silva
- *
- * Classe model - Product
- */
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "productSchema", schema = "subscriptionschema")
+@Table(name = "produto")
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;

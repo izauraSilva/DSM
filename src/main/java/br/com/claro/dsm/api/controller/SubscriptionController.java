@@ -1,9 +1,7 @@
 package br.com.claro.dsm.api.controller;
 
-import br.com.claro.dsm.domain.model.Subscription;
 import br.com.claro.dsm.dto.request.RequestDTO;
 import br.com.claro.dsm.service.SubscriptionService;
-import br.com.claro.dsm.transform.SubscriptionBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,13 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
-
-/**
- * @author Izaura Silva
- *
- * Classe Controller - endpoints subscription
- */
 @RestController
 @RequestMapping(value = "/api/dsm")
 public class SubscriptionController {
@@ -26,23 +17,11 @@ public class SubscriptionController {
     @Autowired
     private SubscriptionService service;
 
-    @Autowired
-    private SubscriptionBuilder subscriptionBuilder;
-
-    /**
-     * Endpoint - Gestão de assinaturas de produtos contratados por um cliente
-     *
-     * @param request
-     * @return HttpStatus
-     */
     @PostMapping("/subscription")
-    public ResponseEntity createSubscriptions(@Valid @RequestBody RequestDTO request) {
-
-        //blindar entity .. expor somente dto
-        Subscription subscription = subscriptionBuilder.getSubscription(request);
+    public ResponseEntity createSubscriptions(@RequestBody RequestDTO request) {
 
         //service para persitir no BD
-        service.createSubscription(subscription);
+        service.createSubscription(request.getSubscription());
 
         //return somente code http
         return new ResponseEntity(HttpStatus.CREATED);

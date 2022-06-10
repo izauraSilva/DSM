@@ -6,18 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
-/**
- * @author Izaura Silva
- *
- * Classe model - Payment
- */
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "paymentSchema", schema = "subscriptionschema")
+@Table(name = "pagamento")
 public class Payment {
 
     @Id
